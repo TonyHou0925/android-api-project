@@ -1,0 +1,14 @@
+{
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "forwardPorts": [8080],
+  "portsAttributes": {
+    "8080": {
+      "label": "Tomcat Web Server",
+      "onAutoForward": "openBrowser",
+      "visibility": "public"
+    }
+  },
+  "postCreateCommand": "catalina.sh run"
+}
